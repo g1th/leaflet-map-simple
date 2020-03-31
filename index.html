@@ -33,12 +33,12 @@
 
   /* Set up the map with initial center and zoom level */
   /*create a map of the center of London with pretty Mapbox Streets tiles. First we’ll initialize the map and set its view to our chosen geographical coordinates and a zoom level*/
-  var mymap = L.map("mapid").setView([16.871311, 96.1735], 13);
-  /*var map = L.map('mapid', {
-  center: [41.77, -72.69], // EDIT latitude, longitude to re-center map
+  /*var mymap = L.map("mapid").setView([16.871311, 96.1735], 13);*/
+  var map = L.map('mapid', {
+  center: [16.871311, 96.1735], // EDIT latitude, longitude to re-center map
   zoom: 12,  // EDIT from 1 to 18 -- decrease to zoom out, increase to zoom in
   scrollWheelZoom: false
-  });*/
+  });
 
   /* Control panel to display map layers */
   // var controlLayers = L.control.layers( null, null, {
@@ -68,7 +68,7 @@
   // controlLayers.addBaseLayer(terrain, 'Stamen Terrain basemap');
 
   /* Display a blue point marker with pop-up text */
-  L.marker([16.871311, 96.1735]).addTo(mymap) // EDIT latitude, longitude to re-position marker
+  L.marker([16.871311, 96.1735]).addTo(map) // EDIT latitude, longitude to re-position marker
   .bindPopup("Insert pop-up text here"); // EDIT pop-up text message
 
   /* Upload Latitude/Longitude markers from data.csv file, show Title in pop-up, and override initial center and zoom to fit all in map */
